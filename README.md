@@ -57,7 +57,7 @@ This project is a library management system developed using MySQL. It includes e
     ('Orgullo y prejuicio', 'Jane Austen', '1813-01-28', '978-84-15702-91-1', 1, 464);
 
 ### Users Data
-INSERT INTO User (name, email, membershipDate, active, role) VALUES 
+    INSERT INTO User (name, email, membershipDate, active, role) VALUES 
     ('John Doe', 'john@example.com', '2022-05-17', true, 1),
     ('Jane Smith', 'jane@example.com', '2022-05-17', true, 2),
     ('Alice Johnson', 'alice@example.com', '2022-05-17', false, 2),
@@ -65,7 +65,7 @@ INSERT INTO User (name, email, membershipDate, active, role) VALUES
     ('Emily Davis', 'emily@example.com', '2022-05-17', true, 3);
 
 ### Loan Data
-INSERT INTO Loan (userId, bookId, loanDate, returnDate, returned) VALUES
+    INSERT INTO Loan (userId, bookId, loanDate, returnDate, returned) VALUES
     (1, 3, '2024-05-01', '2024-05-15', false),
     (2, 2, '2024-04-20', '2024-05-10', true),
     (3, 1, '2024-05-05', '2024-05-20', false);
