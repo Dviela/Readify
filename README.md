@@ -14,7 +14,7 @@ This project is a library management system developed using MySQL. It includes e
 
 ## Introduction
 
-The Library Management System is designed to help manage a library's inventory, user registrations, and book loans efficiently. The database schema includes three main entities: `Book`, `User`, and `Loan`.
+**Readify** is designed to help manage a library's inventory, user registrations, and book loans efficiently. The database schema includes three main entities: `Book`, `User`, and `Loan`.
 
 ## Database Schema
 
@@ -50,12 +50,12 @@ The Library Management System is designed to help manage a library's inventory, 
 
 ## Installation
 
-To set up the Library Management System API, follow these steps:
+To set up Readify API, follow these steps:
 
 1. Clone the repository:
     
         git clone https://github.com/Dviela/Readify.git
-        cd library-management-api
+        cd readify
     
 
 3. Set up the MySQL database:
@@ -96,12 +96,12 @@ To set up the Library Management System API, follow these steps:
 
 4. Update `application.properties` with your MySQL configuration:
    
-            ```properties
+            
             spring.datasource.url=jdbc:mysql://localhost:3306/Library
             spring.datasource.username=root
             spring.datasource.password=yourpassword
             spring.jpa.hibernate.ddl-auto=update
-            ```
+            
 
 5. Build and run the project using Maven:
     
