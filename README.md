@@ -54,11 +54,11 @@ To set up the Library Management System API, follow these steps:
 
 1. Clone the repository:
     
-    git clone https://github.com/Dviela/Readify.git
-    cd library-management-api
+        git clone https://github.com/Dviela/Readify.git
+        cd library-management-api
     
 
-2. Set up the MySQL database:
+3. Set up the MySQL database:
     ```sql
     CREATE DATABASE Library;
     USE Library;
@@ -94,7 +94,7 @@ To set up the Library Management System API, follow these steps:
     );
     ```
 
-3. Update `application.properties` with your MySQL configuration:
+4. Update `application.properties` with your MySQL configuration:
    
             ```properties
             spring.datasource.url=jdbc:mysql://localhost:3306/Library
