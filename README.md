@@ -196,4 +196,41 @@ The API provides endpoints for managing books, users, and loans. Below are the d
     "returned": true
     }'
 
+### PHP
+### Project Structure
+project-root/
+├── config/
+│ └── db_config.php
+├── css/
+│ └── styles.css
+├── views/
+│ ├── users.php
+│ └── books.php
+├── index.php
+└── ...
+
+config/: Contains the db_config.php file with the database configuration.
+css/: Contains the styles.css file for the application styles.
+views/: Contains PHP views for listing users and books.
+index.php: Homepage of the application.
+
+### Technologies Used
+The project utilizes the following technologies:
+
+PHP: Programming language used for server-side logic.
+HTML: Used for the structure of web pages.
+CSS: Used for styling web pages.
+
+### Database Configuration
+The db_config.php file in the config/ directory contains the configuration for the MySQL database used by the application.
+
+### Running the Project
+To run the project, ensure you have a web server and PHP installed in your development environment. Then, you can access the homepage at http://localhost:port/index.php.
+Remember to have XAMPP active along with MySQL for the database to function correctly.
+
+
+
+
+
+
 
