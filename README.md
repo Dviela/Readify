@@ -95,18 +95,18 @@ To set up the Library Management System API, follow these steps:
         ```
     
     3. Update `application.properties` with your MySQL configuration:
-        ```properties
-        spring.datasource.url=jdbc:mysql://localhost:3306/Library
-        spring.datasource.username=root
-        spring.datasource.password=yourpassword
-        spring.jpa.hibernate.ddl-auto=update
-        ```
+            ```properties
+            spring.datasource.url=jdbc:mysql://localhost:3306/Library
+            spring.datasource.username=root
+            spring.datasource.password=yourpassword
+            spring.jpa.hibernate.ddl-auto=update
+            ```
     
     4. Build and run the project using Maven:
-        ```bash
-        mvn clean install
-        mvn spring-boot:run
-        ```
+        
+            mvn clean install
+            mvn spring-boot:run
+        
 
 ## Usage
 
@@ -142,7 +142,7 @@ The API provides endpoints for managing books, users, and loans. Below are the d
 
 ### Create a Book
 
-    ```bash
+    
     curl -X POST http://localhost:8080/api/books -H "Content-Type: application/json" -d '{
     "title": "The Odyssey",
     "author": "Homer",
