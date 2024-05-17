@@ -48,7 +48,7 @@ This project is a library management system developed using MySQL. It includes e
 - **FOREIGN KEY (bookId)**: REFERENCES Book(id)
 - **FOREIGN KEY (userId)**: REFERENCES User(id)
 
-  ### Books Data
+### Books Data
     INSERT INTO Book (title, author, publishedDate, ISBN, available, pageCount) VALUES 
     ('El Señor de los Anillos', 'J.R.R. Tolkien', '1954-07-29', '978-84-450-7084-9', 1, 1178),
     ('Cien años de soledad', 'Gabriel García Márquez', '1967-05-30', '978-84-376-0494-7', 1, 417),
