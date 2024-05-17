@@ -198,16 +198,18 @@ The API provides endpoints for managing books, users, and loans. Below are the d
 
 ### PHP
 ### Project Structure
-project-root/
-├── config/
-│ └── db_config.php
-├── css/
-│ └── styles.css
-├── views/
-│ ├── users.php
-│ └── books.php
-├── index.php
-└── ...
+
+    project-root/
+    ├── config/
+    │ └── db_config.php
+    ├── css/
+    │ └── styles.css
+    ├── views/
+    │ ├── users.php
+    │ └── books.php
+    ├── index.php
+    └── ...
+    
 
 - **config/**: Contains the db_config.php file with the database configuration.
 - **css/**: Contains the styles.css file for the application styles.
