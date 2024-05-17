@@ -93,6 +93,29 @@ To set up Readify API, follow these steps:
         FOREIGN KEY (user_id) REFERENCES User(user_id)
     );
     ```
+    
+    INSERT INTO Book (title, author, publishedDate, ISBN, available, pageCount)
+VALUES 
+    ('El Señor de los Anillos', 'J.R.R. Tolkien', '1954-07-29', '978-84-450-7084-9', 1, 1178),
+    ('Cien años de soledad', 'Gabriel García Márquez', '1967-05-30', '978-84-376-0494-7', 1, 417),
+    ('Harry Potter y la piedra filosofal', 'J.K. Rowling', '1997-06-26', '978-84-9838-093-4', 1, 352),
+    ('1984', 'George Orwell', '1949-06-08', '978-84-666-5339-5', 1, 328),
+    ('Orgullo y prejuicio', 'Jane Austen', '1813-01-28', '978-84-15702-91-1', 1, 464);
+
+INSERT INTO User (name, email, membershipDate, active, role)
+VALUES 
+    ('John Doe', 'john@example.com', '2022-05-17', true, 1),
+    ('Jane Smith', 'jane@example.com', '2022-05-17', true, 2),
+    ('Alice Johnson', 'alice@example.com', '2022-05-17', false, 2),
+    ('Bob Brown', 'bob@example.com', '2022-05-17', true, 1),
+    ('Emily Davis', 'emily@example.com', '2022-05-17', true, 3);
+
+INSERT INTO Loan (userId, bookId, loanDate, returnDate, returned)
+VALUES
+    (1, 3, '2024-05-01', '2024-05-15', false),
+    (2, 2, '2024-04-20', '2024-05-10', true),
+    (3, 1, '2024-05-05', '2024-05-20', false);
+
 
 4. Update `application.properties` with your MySQL configuration:
    
