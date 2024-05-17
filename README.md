@@ -1,6 +1,6 @@
-# Library Management System
+# Readify
 
-This project is a Library Management System developed using MySQL. It includes entities for managing books, users, and loans.
+This project is a library management system developed using MySQL. It includes entities for managing books, users, and loans.
 
 ## Table of Contents
 
