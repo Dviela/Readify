@@ -52,61 +52,61 @@ The Library Management System is designed to help manage a library's inventory, 
 
 To set up the Library Management System API, follow these steps:
 
-    1. Clone the repository:
-        ```bash
-        git clone https://github.com/yourusername/library-management-api.git
-        cd library-management-api
+1. Clone the repository:
+    
+    git clone https://github.com/yourusername/library-management-api.git
+    cd library-management-api
+    
+
+2. Set up the MySQL database:
+    ```sql
+    CREATE DATABASE Library;
+    USE Library;
+
+    CREATE TABLE Book (
+        book_id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        author VARCHAR(255) NOT NULL,
+        genre VARCHAR(100),
+        publication_date DATE,
+        isbn VARCHAR(20) UNIQUE NOT NULL,
+        quantity INT NOT NULL
+    );
+
+    CREATE TABLE User (
+        user_id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        address VARCHAR(255),
+        phone VARCHAR(20),
+        email VARCHAR(100) UNIQUE NOT NULL,
+        registration_date DATE NOT NULL DEFAULT CURRENT_DATE
+    );
+
+    CREATE TABLE Loan (
+        loan_id INT AUTO_INCREMENT PRIMARY KEY,
+        book_id INT,
+        user_id INT,
+        loan_date DATE NOT NULL DEFAULT CURRENT_DATE,
+        return_date DATE,
+        status ENUM('loaned', 'returned') NOT NULL DEFAULT 'loaned',
+        FOREIGN KEY (book_id) REFERENCES Book(book_id),
+        FOREIGN KEY (user_id) REFERENCES User(user_id)
+    );
+    ```
+
+3. Update `application.properties` with your MySQL configuration:
+        ```properties
+        spring.datasource.url=jdbc:mysql://localhost:3306/Library
+        spring.datasource.username=root
+        spring.datasource.password=yourpassword
+        spring.jpa.hibernate.ddl-auto=update
         ```
+
+4. Build and run the project using Maven:
     
-    2. Set up the MySQL database:
-        ```sql
-        CREATE DATABASE Library;
-        USE Library;
+        mvn clean install
+        mvn spring-boot:run
     
-        CREATE TABLE Book (
-            book_id INT AUTO_INCREMENT PRIMARY KEY,
-            title VARCHAR(255) NOT NULL,
-            author VARCHAR(255) NOT NULL,
-            genre VARCHAR(100),
-            publication_date DATE,
-            isbn VARCHAR(20) UNIQUE NOT NULL,
-            quantity INT NOT NULL
-        );
-    
-        CREATE TABLE User (
-            user_id INT AUTO_INCREMENT PRIMARY KEY,
-            name VARCHAR(255) NOT NULL,
-            address VARCHAR(255),
-            phone VARCHAR(20),
-            email VARCHAR(100) UNIQUE NOT NULL,
-            registration_date DATE NOT NULL DEFAULT CURRENT_DATE
-        );
-    
-        CREATE TABLE Loan (
-            loan_id INT AUTO_INCREMENT PRIMARY KEY,
-            book_id INT,
-            user_id INT,
-            loan_date DATE NOT NULL DEFAULT CURRENT_DATE,
-            return_date DATE,
-            status ENUM('loaned', 'returned') NOT NULL DEFAULT 'loaned',
-            FOREIGN KEY (book_id) REFERENCES Book(book_id),
-            FOREIGN KEY (user_id) REFERENCES User(user_id)
-        );
-        ```
-    
-    3. Update `application.properties` with your MySQL configuration:
-            ```properties
-            spring.datasource.url=jdbc:mysql://localhost:3306/Library
-            spring.datasource.username=root
-            spring.datasource.password=yourpassword
-            spring.jpa.hibernate.ddl-auto=update
-            ```
-    
-    4. Build and run the project using Maven:
-        
-            mvn clean install
-            mvn spring-boot:run
-        
 
 ## Usage
 
