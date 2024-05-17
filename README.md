@@ -209,10 +209,10 @@ project-root/
 ├── index.php
 └── ...
 
-config/: Contains the db_config.php file with the database configuration.
-css/: Contains the styles.css file for the application styles.
-views/: Contains PHP views for listing users and books.
-index.php: Homepage of the application.
+- **config/**: Contains the db_config.php file with the database configuration.
+- **css/**: Contains the styles.css file for the application styles.
+- **views/**: Contains PHP views for listing users and books.
+- **index.php**: Homepage of the application.
 
 ### Technologies Used
 The project utilizes the following technologies:
