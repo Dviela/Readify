@@ -114,7 +114,7 @@ The API provides endpoints for managing books, users, and loans. Below are the d
 
 ## API Endpoints
 
-    ### Book
+### Book
     
     - **Create Book**: `POST /api/books`
     - **Get All Books**: `GET /api/books`
@@ -122,7 +122,7 @@ The API provides endpoints for managing books, users, and loans. Below are the d
     - **Update Book**: `PUT /api/books/{id}`
     - **Delete Book**: `DELETE /api/books/{id}`
     
-    ### User
+### User
     
     - **Create User**: `POST /api/users`
     - **Get All Users**: `GET /api/users`
@@ -130,7 +130,7 @@ The API provides endpoints for managing books, users, and loans. Below are the d
     - **Update User**: `PUT /api/users/{id}`
     - **Delete User**: `DELETE /api/users/{id}`
     
-    ### Loan
+### Loan
     
     - **Create Loan**: `POST /api/loans`
     - **Get All Loans**: `GET /api/loans`
