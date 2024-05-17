@@ -18,13 +18,12 @@ public class ReadifyApplication {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conexion = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/basededatos",
-					"usuario", "contraseña");
+					"jdbc:mysql://localhost:3306/library",
+					"root", "");
 		} catch (ClassNotFoundException cnfe) {
 			cnfe.printStackTrace();
 		} catch (SQLException sqle) {
 			sqle.printStackTrace();
 		}
 	}
-
 }

@@ -528,7 +528,7 @@ components:
         title:
           type: string
           example: The Odyssey
-          description: Título del libro.
+          description: Book title.
         author:
           type: string
           example: Homer
