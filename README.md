@@ -138,40 +138,40 @@ The API provides endpoints for managing books, users, and loans. Below are the d
     - **Update Loan**: `PUT /api/loans/{id}`
     - **Delete Loan**: `DELETE /api/loans/{id}`
     
-    ## Example Requests
-    
-    ### Create a Book
-    
-    ```bash
-    curl -X POST http://localhost:8080/api/books -H "Content-Type: application/json" -d '{
-      "title": "The Odyssey",
-      "author": "Homer",
-      "publishedDate": "1967-06-05",
-      "isbn": "978-84-670-5005-9",
-      "available": false,
-      "pageCount": 448 
-    }'
+## Example Requests
 
-    ### Create a User
+### Create a Book
 
-    ```bash
-    curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "membershipDate": "2023-05-05",
-      "active": false,
-      "role": 1    
-    }'
+```bash
+curl -X POST http://localhost:8080/api/books -H "Content-Type: application/json" -d '{
+"title": "The Odyssey",
+"author": "Homer",
+"publishedDate": "1967-06-05",
+"isbn": "978-84-670-5005-9",
+"available": false,
+"pageCount": 448 
+}'
 
-    ### Create a Loan
+### Create a User
 
-    ```bash
-    curl -X POST http://localhost:8080/api/loans -H "Content-Type: application/json" -d '{
-      "book_id": 1,
-      "user_id": 1,
-      "loanDate": "2024-05-01",
-      "returnDate": "2024-05-15",
-      "returned": true
-    }'
+```bash
+curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{
+"name": "John Doe",
+"email": "john.doe@example.com",
+"membershipDate": "2023-05-05",
+"active": false,
+"role": 1    
+}'
+
+### Create a Loan
+
+```bash
+curl -X POST http://localhost:8080/api/loans -H "Content-Type: application/json" -d '{
+"book_id": 1,
+"user_id": 1,
+"loanDate": "2024-05-01",
+"returnDate": "2024-05-15",
+"returned": true
+}'
 
 
